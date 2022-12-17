@@ -1,0 +1,20 @@
+#Node modules
+client/node_modules
+server/node_modules
+
+#Config
+.env
+config/config.env
+config/mailerCredentials.js
+client/.env
+
+#Log
+client/.log
+server/.log
+
+
+#Misc
+client/build
+client/dist
+client/.DS_STORE
+

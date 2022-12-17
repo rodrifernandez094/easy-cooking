@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+  z-index: 30;
+}
+
+.logo {
+  font-family: "Lobster", sans-serif;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.nav__links {
+  display: none;
+}
+
+.nav__links_open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  position: absolute;
+  font-size: 2em;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 1.5rem 1rem;
+  background-color: #27bd8b;
+  z-index: 20;
+  animation: open 0.2s;
+}
+
+.link {
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+
+.hamburger {
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translate(-5%, -50%);
+  z-index: 25;
+}
+
+.bars {
+  margin: 8px;
+}
+
+.bg_light {
+  color: #f3f3f3;
+}
+.bg_dark {
+  color: #333333;
+}
+
+.text_light {
+  color: #f3f3f3;
+}
+.text_dark {
+  color: #333333;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+    padding: 1rem 2.5rem;
+  }
+
+  .nav__links {
+    display: flex;
+    align-items: center;
+  }
+  .navbar li {
+    margin-left: 1.5rem;
+  }
+  .link {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+  .hamburger {
+    display: none;
+  }
+
+  .nav__btn {
+    padding: 10px 16px;
+    border-radius: 36px;
+    background: transparent;
+    border: 2px solid #f3f3f3;
+  }
+}
+
+@keyframes open {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
